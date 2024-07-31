@@ -10,7 +10,7 @@ const filePath = process.argv[3];
 
 // Function to fetch the webpage and store it in a file
 function fetchAndStore(url, filePath) {
-  request(url, (error, response, body) => {
+  request({ url, encoding: 'utf8' }, (error, response, body) => {
     if (error) {
       console.error('Error fetching the URL:', error);
       return;
