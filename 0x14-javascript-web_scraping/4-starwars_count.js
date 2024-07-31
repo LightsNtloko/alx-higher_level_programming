@@ -17,7 +17,7 @@ request(apiUrl, (error, response, body) => {
     const data = JSON.parse(body);
     let count = 0;
     data.results.forEach(film => {
-      if (film.characters.includes(`https://swapi-api.alx-tools.com/api/people/${wedgeId}/`)) {
+      if (film.characters.includes(`https://swapi-api.alx-tools.com/api/people/18/`)) {
         count++;
       }
     });
