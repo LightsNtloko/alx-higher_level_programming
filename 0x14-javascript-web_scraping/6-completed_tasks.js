@@ -27,12 +27,8 @@ function fetchCompletedTasks(url) {
       }
     });
 
-    // Filter out users with no completed tasks
-    for (const userId in userTasks) {
-      if (userTasks[userId] > 0) {
-        console.log(`User ${userId}: ${userTasks[userId]}`);
-      }
-    }
+    // Print the results in the desired format
+    console.log(userTasks);
   });
 }
 
