@@ -1,15 +1,15 @@
 #!/usr/bin/node
 
-// Import fsModule
+// Import the fs module
 const fs = require('fs');
 
-// Call for the file path and string from the cmd line arguments
+// Get the file path and string from the command line arguments
 const filePath = process.argv[2];
 const stringToWrite = process.argv[3];
 
-// Write the string in the file
+// Write the string to the file
 fs.writeFile(filePath, stringToWrite, 'utf-8', (err) => {
   if (err) {
-	  console.error(err);
+    console.error(err);
   }
 });
