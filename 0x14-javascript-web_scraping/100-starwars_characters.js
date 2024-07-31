@@ -19,6 +19,8 @@ function fetchCharacters(movieUrl) {
 
     // Check if the movie data is available
     if (body && body.characters) {
+      let characterNames = [];
+
       // Iterate over the character URLs
       body.characters.forEach(characterUrl => {
         request(characterUrl, { json: true }, (error, response, character) => {
@@ -27,8 +29,14 @@ function fetchCharacters(movieUrl) {
             return;
           }
 
-          // Print the character name
-          console.log(character.name);
+          // Add the character name to the list
+          characterNames.push(character.name);
+
+          // If all character requests are complete, sort and print names
+          if (characterNames.length === body.characters.length) {
+            characterNames.sort(); // Sort names alphabetically
+            characterNames.forEach(name => console.log(name));
+          }
         });
       });
     } else {
