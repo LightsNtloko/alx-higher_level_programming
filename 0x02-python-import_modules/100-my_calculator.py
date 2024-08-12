@@ -1,6 +1,8 @@
 #!/usr/bin/python3
+
 from calculator_1 import add, sub, mul, div
 import sys
+
 
 def main():
     if len(sys.argv) != 4:
@@ -25,6 +27,7 @@ def main():
 
     print("{} {} {} = {}".format(a, operator, b, result))
     sys.exit(0)
+
 
 if __name__ == "__main__":
     main()
