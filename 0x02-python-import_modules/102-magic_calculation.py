@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import importlib
 
+
 def magic_calculation(a, b):
     # Dynamically import the module and functions
     calc_module = importlib.import_module('magic_calculation_102')
