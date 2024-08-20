@@ -1,4 +1,15 @@
 #!/usr/bin/python3
+"""
+This module defines a MagicClass that represents a circle.
+
+The MagicClass provides methods to calculate the area and circumference
+of the circle. It includes type checking for the radius to ensure it is
+either an integer or a float.
+
+Classes:
+    MagicClass: Represents a circle with a given radius.
+"""
+
 import math
 
 
@@ -29,7 +40,7 @@ class MagicClass:
         Returns:
             float: The area of the circle.
         """
-        return {self.__radius ** 2 * math.pi)
+        return self.__radius ** 2 * math.pi
 
     def circumference(self):
         """Calculate and return the circumference of the circle.
@@ -37,4 +48,4 @@ class MagicClass:
         Returns:
             float: The circumference of the circle.
         """
-        return (2 * math.pi * self.__radius)
+        return 2 * math.pi * self.__radius
