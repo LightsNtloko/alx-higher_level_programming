@@ -1,20 +1,22 @@
 #!/usr/bin/python3
 
-
 def safe_print_list_integers(my_list=[], x=0):
     count = 0
-    try:
-        for i in range(x):
-            # Check if the index is within the bounds of the list
-            if i >= len(my_list):
-                raise IndexError
-            if isinstance(my_list[i], int):
-                print("{:d}".format(my_list[i]), end="")
+    i = 0
+    while True:
+        try:
+            # Try to access the i-th element
+            element = my_list[i]
+            if isinstance(element, int):
+                print("{:d}".format(element), end="")
                 count += 1
-    except IndexError:
-        # Print traceback message on stderr
-        import sys
-        print("Traceback (most recent call last):", file=sys.stderr)
-        sys.exit(1)  # Exit with an error code to indicate failure
+            i += 1
+            if i >= x:
+                break
+        except IndexError:
+            # Print traceback message on stderr
+            import sys
+            print("Traceback (most recent call last):", file=sys.stderr)
+            sys.exit(1)  # Exit with an error code to indicate failure
     print()
     return count
