@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 
+
 def list_division(my_list_1, my_list_2, list_length):
     result = []
-    
+
     for k in range(list_length):
         try:
             # Attempt to get elements from both lists
@@ -26,5 +27,5 @@ def list_division(my_list_1, my_list_2, list_length):
         finally:
             # Optional cleanup or actions after the try block
             pass
-    
+
     return result
