@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Rectangle class with width, height, area, perimeter, and string representations."""
+"""Rectangle class with width, height, area, perimeter, and string
+representations."""
 
 
 class Rectangle:
